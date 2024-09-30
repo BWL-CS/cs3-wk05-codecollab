@@ -24,10 +24,6 @@ print(DIV)
 print(df["Age"])
 print(DIV)
 
-ages = pd.Series([22, 35, 58], name="Age")
-print(ages)
-print(DIV)
-
 # PART B
 titanic = pd.read_csv("titanic.csv")
 
