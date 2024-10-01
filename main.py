@@ -2,15 +2,11 @@ from numpy import divide
 import pandas as pd
 
 # PART A
-df = pd.DataFrame({
-    "Name": [
-        "Braund, Mr. Owen Harris",
-        "Allen, Mr. William Henry",
-        "Bonnell, Miss. Elizabeth",
-    ],
-    "Age": [22, 35, 58],
-    "Sex": ["male", "male", "female"],
-})
+dict = {'Braund, Mr. Owen Harris': 22,
+        'Allen, Mr. William Henry': 35,
+        "Bonnell, Miss. Elizabeth": 58}
+series = pd.Series(dict)
+dataframe = pd.DataFrame(series, columns=['age'])
 
 # Divider to help organize terminal output
 DIV = "〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️〰️"
@@ -21,7 +17,7 @@ print(DIV)
 print(df.describe())
 print(DIV)
 
-print(df["Age"])
+print(df['age'])
 print(DIV)
 
 # PART B
